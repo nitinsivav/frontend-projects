@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+
+    <div class="container">
+        
+
+        <div class="form-container">
+
+            <div class="form-header">
+                <h1>Contact Us</h1>
+                <p>Get in contacts with us</p>
+            </div>
+            
+            
+            <form>
+
+                <div class="input-container">
+
+                    <div class="input-set">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Name" required>
+                    </div>
+
+                    <div class="input-set">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-set">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Phone" required>
+                    </div>
+
+                    <div class="input-set">
+                        <i class="fas fa-tag"></i>
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                </div>
+
+                <div class="message-container">
+                    <i class="fas fa-comment"></i>
+                    <textarea class="message-input" placeholder="Message" rows="5" cols="50" required></textarea>
+                </div>
+
+                <div class="info">
+                    <div class="info-item">
+                        <p> 
+                            
+                        <i class="fas fa-map-marker-alt"></i>
+                        123 Main Street, City, Country
+                        </p>
+                    </div>
+
+                    <div class="info-item">
+                        
+                        <p> 
+                            <i class="fas fa-phone"></i>
+                            +1 (123) 456-7890
+                        </p>
+
+                    </div>  
+                    <div class="info-item">
+                        <p> 
+                            <i class="fas fa-envelope"></i>
+                            info@example.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" >
+                        <div class="button-text">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </div>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
