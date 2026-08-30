@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    
+    <!-- <h1>Todo App</h1> -->
+
+
+    <div class="container">
+
+        <header>
+            <h2><i class="fas fa-check-circle"></i> My Tasks</h2>
+            <p class="date">Today is <span id="current-date"></span></p>
+        </header>
+
+        <main>
+
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Add a new task..." />
+                <button id="add-task-btn"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="filter-container">
+                <button data-filter="all" class="filter-btn active">All</button>
+                <button data-filter="active" class="filter-btn">Active</button>
+                <button data-filter="completed" class="filter-btn">Completed</button>
+            </div>
+
+            <div class="task-list" id="task-list">
+                    <!-- <i class="fas fa-clipboard-list hidden icon"></i> -->
+
+                <ul id="tasks">
+                    
+                </ul>
+            </div>
+
+        </main>
+
+        <footer>
+            <p><span id="task-count">0</span> tasks left</p>
+
+            <p id="clear-tasks">Clear completed tasks</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
