@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --page-night: #edf3ff;
+    --card-night: #ffffff;
+    --card-surface: #f6f8ff;
+
+    --teal: #7c8cff;
+    --teal-deep: #5a67f2;
+    --teal-soft: #dfe5ff;
+
+    --amber: #ffb454;
+    --amber-soft: #ffe7b8;
+
+    --heading-white: #111827;
+    --body-white: #334155;
+    --muted-text: #64748b;
+
+    --profile-glow: rgba(92, 109, 246, 0.18);
+    --profile-background: linear-gradient(135deg, #7c8cff 0%, #8ed8c8 100%);
+
+    --social-background: #edf2ff;
+    --social-icon: #1f2937;
+
+    --card-border: #e2e8f0;
+    --section-line: #dfe7f5;
+
+    --button-teal: #5a67f2;
+    --button-hover: #4554d7;
+
+    --border-gradient: linear-gradient(135deg, #dfe5ff, #7c8cff, #5a67f2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #f9fbff 0%, var(--page-night) 45%, #eaf0ff 100%);
+    color: var(--heading-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: auto;
+    color: var(--body-white);
+    background-color: var(--page-night);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header > h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--teal);
+}
+
+header > h1::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    background-color: var(--teal);
+}
+
+header > p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--muted-text);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    background-color: var(--page-night);
+    color: var(--body-white);
+}
+
+.member-card {
+    margin: 0;
+    background: var(--card-night);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(90, 103, 242, 0.12);
+}
+
+.card-top {
+    position: relative;
+    z-index: 1;
+    padding: 70px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    z-index: -1;
+    background: var(--profile-background);
+    transition: transform 0.4s ease;
+}
+
+.member-card:hover .bg {
+    transform: scale(1.1);
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border: 4px solid var(--card-border);
+    border-radius: 50%;
+    background: var(--profile-background);
+    color: var(--text-light);
+    font-size: 2.5rem;
+}
+
+.profile-pic i {
+    color: var(--body-white);
+}
+
+.member-info {
+    margin-top: 10px;
+}
+
+.member-name {
+    width: 100%;
+    text-align: center;
+    color: var(--heading-white);
+    font-size: 1.1rem;
+}
+
+.card-bottom {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    background: var(--card-surface);
+}
+
+.card-bottom .member-bio {
+    margin: 5px 0;
+    padding: 1px 10px;
+    color: var(--muted-text);
+}
+
+.card-bottom .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--social-background);
+    color: var(--social-icon);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons:hover {
+    background-color: var(--teal);
+    color: var(--card-night);
+}
+
+.message {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 25px 20px;
+    text-align: center;
+    color: var(--muted-text);
+    border: 1px solid rgba(92, 109, 246, 0.16);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(223, 229, 255, 0.8), rgba(255, 255, 255, 0.9));
+    box-shadow: 0 10px 24px rgba(92, 109, 246, 0.08);
+    width: 50%;
+}
+
+.message h2 {
+    color: var(--teal-deep);
+}
+
+.message p {
+    color: var(--body-white);
+}
+
+.message button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 1.2rem;
+    background-color: var(--teal);
+    color: var(--card-night);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.message button:hover {
+    background-color: var(--teal-deep);
+    color: var(--card-night);
+    transform: translateY(-2px);
+}
+
+.message button:active {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
