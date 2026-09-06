@@ -1,0 +1,259 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#search-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#search-btn:active {
+  transform: translateY(2px);
+}
+
+#result-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+#error-container {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#meal-details {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+#back-btn {
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease
+}
+
+#back-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.meal-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-details-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.meal-details-title {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.meal-details-category {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.meal-details-category span {
+  background-color: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.meal-details-instructions {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.meal-details-instructions h3 {
+  margin-bottom: 0.5rem;
+}
+
+.ingredients-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.ingredients-list li i {
+  color: #007bff;
+  margin-right: 8px;
+}
+
+.youtube-link {
+  display: inline-block;
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.youtube-link i {
+  margin-right: 8px;
+}
+
+#error-container {
+  background-color: rgba(255, 126, 95, 0.1);
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.api-link {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  color: #555;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.api-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.meal {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.meal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.meal img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.meal-info {
+  padding: 1rem;
+}
+
+.meal-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.meal-category {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
